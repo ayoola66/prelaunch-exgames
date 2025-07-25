@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Excellence Games – Pre-order Your Ultimate Game Night Experience
+    </title>
+    <meta
+      name="description"
+      content="The UK's first hybrid board-game platform blending culture, chaos & connection. Pre-order now for exclusive bonuses and early access."
+    />
+    <meta
+      name="keywords"
+      content="board games, game night, hybrid games, Excellence Games, UK games, cultural games"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://excellencegames.com/" />
+    <meta
+      property="og:title"
+      content="Excellence Games – Pre-order Your Ultimate Game Night Experience"
+    />
+    <meta
+      property="og:description"
+      content="The UK's first hybrid board-game platform blending culture, chaos & connection. Pre-order now for exclusive bonuses and early access."
+    />
+    <meta property="og:image" content="images/Excellence-Games-Box-1.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://excellencegames.com/" />
+    <meta
+      property="twitter:title"
+      content="Excellence Games – Pre-order Your Ultimate Game Night Experience"
+    />
+    <meta
+      property="twitter:description"
+      content="The UK's first hybrid board-game platform blending culture, chaos & connection. Pre-order now for exclusive bonuses and early access."
+    />
+    <meta
+      property="twitter:image"
+      content="images/Excellence-Games-Box-1.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="luxury.css" />
+
+    <!-- Scripts -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-G19ZNQM406"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-G19ZNQM406");
+    </script>
+  </head>
+  <body>
+    <!-- 🖤 Dynamic overlay (opacity set in CSS) -->
+    <div id="overlay"></div>
+
+    <!--  HERO -->
+    <section id="hero">
+      <div class="hero-bg">
+        <video class="bg-video" autoplay muted loop playsinline preload="auto">
+          <source src="videos/background-video.mp4" type="video/mp4" />
+        </video>
+        <div class="crown-overlay"></div>
+      </div>
+      <img
+        src="images/Excellence-Games-Logo-Gold.png"
+        alt="Excellence Games"
+        class="logo"
+      />
+      <h1 class="headline">GAME NIGHT 🏆 UPGRADED.</h1>
+      <p class="subline">
+        The UK's first hybrid board-game platform blending culture, chaos &
+        connection.
+      </p>
+      <button id="cta-primary" class="btn-primary">Pre-order Now</button>
+    </section>
+
+    <!-- 🎲 WHY EXCELLENCE -->
+    <section id="why" class="two-col">
+      <div class="text">
+        <h2>Why Excellence Games? 🤔</h2>
+        <h3>Real Players. Real Moments.</h3>
+        <p>
+          We don't just make board games, we create unforgettable experiences.
+          Our hybrid design fuses physical boards with digital unlocks, pushing
+          game night into a whole new lane.
+        </p>
+        <ul>
+          <li>
+            🖤 <strong>Exclusive Editions:</strong> Black, Targeted, Urban & UK
+            Editions
+          </li>
+          <li>
+            🎮 <strong>Bonus Digital Challenges:</strong> play beyond the board
+          </li>
+          <li>
+            🎟️ <strong>Event Access:</strong> early invites to immersive live
+            game nights
+          </li>
+        </ul>
+      </div>
+      <div class="img-col">
+        <img
+          src="images/Excellence-Games-Box-1.png"
+          alt="Excellence Games Black Edition - Our premium board game with exclusive content"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- 🎁 PRE-LAUNCH OFFER -->
+    <section id="offer" class="two-col reverse">
+      <div class="img-col">
+        <img
+          src="images/Excellence-Games-Box-2-1-2.png"
+          alt="Excellence Games Pre-launch Bonus Pack - Early access and exclusive content"
+          loading="lazy"
+        />
+      </div>
+      <div class="text">
+        <h2>The Drop Is Coming 🚨</h2>
+        <h3>Be the First to Play.</h3>
+        <ul>
+          <li>🚚 Early delivery before public release</li>
+          <li>🎁 Exclusive launch bonuses</li>
+          <li>🔑 Lifetime access to private challenges & content</li>
+        </ul>
+        <button id="cta-secondary" class="btn-secondary">
+          Pre-order Today
+        </button>
+      </div>
+    </section>
+
+    <!-- 👥 COMMUNITY & TRUST -->
+    <section id="trust">
+      <h2>Community & Trust 🤝</h2>
+      <p>
+        Join <strong>2,900+ players</strong> already following our journey on
+        <a
+          href="https://instagram.com/excellence_games"
+          target="_blank"
+          rel="noopener"
+          >@excellence_games</a
+        >.
+      </p>
+      <small
+        >✅ 100 % secure checkout powered by Stripe – your details are safe &
+        protected.</small
+      >
+    </section>
+
+    <!-- Scripts -->
+    <script src="client.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "h1": "Excellence Games Prelaunch Sales!",
+    "h2": "Home of “Excellence” & “Targeted” board games that shape your character"
+  },
+  "pricing": {
+    "type": "subscription",
+    "amount": 4000,
+    "currency": "gbp",
+    "interval": "year"
+  },
+  "stripe": {
+    "pk_live": "pk_live_51La1jAHevxkkf6db0faZu4cYk7F1yL9HKMjZcdHwXQ1ZIIMeEkBpx6POTnOUmGId7V8sFrquMI8CWqrndPxnviKn008UEB6keA",
+    "pk_test": "pk_test_xxxxxxxxxxxxxxxxxxxxx",
+    "priceId": "price_1RoNqJHevxkkf6dbaLdHDEZ4",
+    "mode": "live"
+  }
+}
