@@ -4,7 +4,7 @@
 :root {
   --black-chrome: #0d0d0d;
   --chrome-gold: linear-gradient(135deg, #ffd700 0%, #ffb800 50%, #ff9500 100%);
-  --glass: rgba(255, 255, 255, 0.05);
+  --glass: rgba(255, 255, 255, 0.8);
   --neon: #ffd700;
 }
 
@@ -13,6 +13,8 @@ section:not(#hero) {
   position: relative;
   background: var(--glass);
   backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 71, 171, 0.1);
 }
 
 section:not(#hero)::before {
@@ -21,8 +23,8 @@ section:not(#hero)::before {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    transparent 100%
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.2) 100%
   );
   pointer-events: none;
 }
@@ -43,8 +45,8 @@ section:not(#hero)::before {
 #overlay {
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.95) 100%
   );
 }
 
