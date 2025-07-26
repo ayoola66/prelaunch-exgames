@@ -83,10 +83,12 @@ body::before {
   margin: 0 auto;
 }
 
+/* Logo specific styling */
 .logo {
   width: 180px;
   margin-bottom: 2rem;
   filter: drop-shadow(0 4px 12px rgba(255, 215, 0, 0.3));
+  display: block; /* Ensure logo is block level */
 }
 
 .headline {
@@ -265,6 +267,7 @@ section {
   padding-bottom: 100%; /* Makes it square */
   overflow: hidden;
   border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Light background to see container */
 }
 
 .carousel-container img {
@@ -273,15 +276,17 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to contain */
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: white; /* Add white background for transparent images */
 }
 
 .carousel-container img.active {
   opacity: 1;
+  z-index: 1; /* Ensure active image is on top */
 }
 
 .carousel-container:hover img {

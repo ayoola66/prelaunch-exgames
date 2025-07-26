@@ -38,8 +38,33 @@ function init() {
   }
 }
 
-// Carousel functionality
+// Image load verification
 document.addEventListener("DOMContentLoaded", () => {
+  // Verify all images
+  const allImages = document.querySelectorAll("img");
+  allImages.forEach((img) => {
+    // Check if image is already loaded
+    if (img.complete) {
+      handleImageLoad(img);
+    } else {
+      img.addEventListener("load", () => handleImageLoad(img));
+      img.addEventListener("error", () => handleImageError(img));
+    }
+  });
+
+  function handleImageLoad(img) {
+    console.log("Image loaded successfully:", img.src);
+  }
+
+  function handleImageError(img) {
+    console.error("Error loading image:", img.src);
+    // Add a visible error state
+    img.style.background = "#f8f9fa";
+    img.style.padding = "20px";
+    img.style.border = "1px solid #dee2e6";
+  }
+
+  // Carousel functionality
   const carousels = document.querySelectorAll(".carousel-container");
 
   carousels.forEach((carousel) => {
@@ -47,6 +72,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const interval = parseInt(carousel.dataset.interval) || 5000;
     let currentIndex = 0;
     let timer;
+
+    // Verify all carousel images are loaded
+    let allLoaded = Array.from(images).every((img) => img.complete);
+    if (!allLoaded) {
+      console.log("Waiting for all carousel images to load...");
+      Promise.all(
+        Array.from(images).map((img) => {
+          if (img.complete) return Promise.resolve();
+          return new Promise((resolve, reject) => {
+            img.addEventListener("load", resolve);
+            img.addEventListener("error", reject);
+          });
+        })
+      )
+        .then(() => {
+          console.log("All carousel images loaded");
+          startCarousel();
+        })
+        .catch((error) => {
+          console.error("Error loading carousel images:", error);
+        });
+    } else {
+      startCarousel();
+    }
 
     function showNextImage() {
       images[currentIndex].classList.remove("active");
@@ -64,7 +113,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     carousel.addEventListener("mouseenter", stopCarousel);
     carousel.addEventListener("mouseleave", startCarousel);
-
-    startCarousel();
   });
 });
