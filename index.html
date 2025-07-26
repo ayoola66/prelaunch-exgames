@@ -55,6 +55,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -114,35 +118,52 @@
         </p>
         <ul>
           <li>
-            🖤 <strong>Exclusive Editions:</strong> Black, Targeted, Urban & UK
-            Editions
+            <strong>Exclusive Editions</strong><br />
+            Black, Targeted, Urban & UK Editions
           </li>
           <li>
-            🎮 <strong>Bonus Digital Challenges:</strong> play beyond the board
+            <strong>Bonus Digital Challenges</strong><br />
+            Play beyond the board
           </li>
           <li>
-            🎟️ <strong>Event Access:</strong> early invites to immersive live
-            game nights
+            <strong>Event Access</strong><br />
+            Early invites to immersive live game nights
           </li>
         </ul>
       </div>
       <div class="img-col">
-        <img
-          src="images/Excellence-Games-Box-1.png"
-          alt="Excellence Games Black Edition - Our premium board game with exclusive content"
-          loading="lazy"
-        />
+        <div class="carousel-container" data-interval="4000">
+          <img
+            src="images/Excellence-Games-Box-1.png"
+            alt="Excellence Games Black Edition - Our premium board game with exclusive content"
+            loading="lazy"
+            class="active"
+          />
+          <img
+            src="images/targeted-board-games.png"
+            alt="Excellence Games Black Edition - Alternative view"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
 
     <!-- 🎁 PRE-LAUNCH OFFER -->
     <section id="offer" class="two-col reverse">
       <div class="img-col">
-        <img
-          src="images/Excellence-Games-Box-2-1-2.png"
-          alt="Excellence Games Pre-launch Bonus Pack - Early access and exclusive content"
-          loading="lazy"
-        />
+        <div class="carousel-container" data-interval="5000">
+          <img
+            src="images/Excellence-Games-Box-2-1-2.png"
+            alt="Excellence Games Pre-launch Bonus Pack - Early access and exclusive content"
+            loading="lazy"
+            class="active"
+          />
+          <img
+            src="images/targeted-board-games-bag2.png"
+            alt="Excellence Games Pre-launch Bonus Pack - Alternative view"
+            loading="lazy"
+          />
+        </div>
       </div>
       <div class="text">
         <h2>The Drop Is Coming 🚨</h2>
@@ -167,7 +188,8 @@
           href="https://instagram.com/excellence_games"
           target="_blank"
           rel="noopener"
-          >@excellence_games</a
+          class="instagram-link"
+          ><i class="fab fa-instagram"></i> @excellence_games</a
         >.
       </p>
       <small
