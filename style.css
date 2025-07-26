@@ -206,7 +206,7 @@ section {
 .two-col {
   display: grid;
   gap: 4rem;
-  align-items: center;
+  align-items: start; /* Changed from center to allow natural flow */
   max-width: 1800px;
   margin: 0 auto;
 }
@@ -214,7 +214,7 @@ section {
 @media (min-width: 768px) {
   .two-col {
     grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    gap: 4rem; /* Reduced from 6rem */
   }
   .reverse {
     direction: rtl;
@@ -272,17 +272,29 @@ section {
 
 .img-col {
   width: 100%;
-  max-width: 800px;
+  max-width: 500px; /* Reduced from 800px */
   margin: 0 auto;
 }
 
 .carousel-container {
   position: relative;
   width: 100%;
-  padding-bottom: 100%; /* Makes it square */
+  padding-bottom: 100%;
   overflow: hidden;
   border-radius: 20px;
-  background: transparent; /* Changed from light background to transparent */
+  background: transparent;
+  margin-top: 1rem; /* Add some space from text */
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+  .img-col {
+    max-width: 400px; /* Even smaller on mobile */
+  }
+
+  .two-col {
+    gap: 2rem; /* Smaller gap on mobile */
+  }
 }
 
 .carousel-container img {
