@@ -243,16 +243,24 @@ section {
   gap: 0.5rem;
   color: var(--cobalt);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 71, 171, 0.1);
+  transition: all 0.3s ease;
 }
 
 .instagram-link:hover {
   color: var(--gold-from);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 71, 171, 0.2);
+  transform: translateY(-1px);
 }
 
 .instagram-link i {
   font-size: 1.2em;
+  color: #e4405f; /* Instagram's brand color */
 }
 
 /* —— TRUST SECTION —— */
