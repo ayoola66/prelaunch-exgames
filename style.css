@@ -89,6 +89,7 @@ body::before {
   margin-bottom: 2rem;
   filter: drop-shadow(0 4px 12px rgba(255, 215, 0, 0.3));
   display: block; /* Ensure logo is block level */
+  mix-blend-mode: multiply; /* Added to ensure transparency works well with background */
 }
 
 .headline {
@@ -281,7 +282,7 @@ section {
   padding-bottom: 100%; /* Makes it square */
   overflow: hidden;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1); /* Light background to see container */
+  background: transparent; /* Changed from light background to transparent */
 }
 
 .carousel-container img {
@@ -295,7 +296,7 @@ section {
   transition: opacity 0.5s ease-in-out;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  background: white; /* Add white background for transparent images */
+  background: transparent; /* Changed from white to transparent */
 }
 
 .carousel-container img.active {
