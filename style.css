@@ -255,15 +255,18 @@ section {
 .text li strong {
   font-size: 1.2rem;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem; /* Reduced from 0.5rem */
   color: var(--dark);
+  font-weight: 700;
 }
 
 .text li br + text {
   color: var(--dark);
   opacity: 0.9;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.4;
+  display: block;
+  margin-top: 0.2rem; /* Added to control top spacing */
 }
 
 .img-col {
