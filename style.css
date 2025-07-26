@@ -258,24 +258,49 @@ section:not(#hero) {
 }
 
 .text li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .text li strong {
-  font-size: 1.2rem;
-  display: block;
-  margin-bottom: 0.2rem; /* Reduced from 0.5rem */
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
   color: var(--dark);
   font-weight: 700;
+  line-height: 1.2;
+}
+
+.text li strong::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text li:nth-child(1) strong::before {
+  content: "🖤";
+}
+
+.text li:nth-child(2) strong::before {
+  content: "🎮";
+}
+
+.text li:nth-child(3) strong::before {
+  content: "📺";
 }
 
 .text li br + text {
   color: var(--dark);
   opacity: 0.9;
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.5;
   display: block;
-  margin-top: 0.2rem; /* Added to control top spacing */
+  margin-top: 0.25rem;
 }
 
 .img-col {
